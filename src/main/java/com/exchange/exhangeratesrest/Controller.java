@@ -25,6 +25,15 @@ public class Controller {
     private Connection conn = connect();
     private ExchangeRates er = new ExchangeRates();
 
+    @GetMapping("/")
+    public String getJson(){
+        String message = "Use \n" +
+                "\t/last10days or " +
+                "\t/rates-by-date/?date={YYYY-MM-DD}" +
+                "endpoints";
+        return message;
+    }
+
     @GetMapping("/last10days")
     public Map<String, Map<String, Double>> getJson(){
         System.out.println();
