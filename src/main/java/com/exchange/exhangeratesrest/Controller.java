@@ -26,7 +26,7 @@ public class Controller {
     private ExchangeRates er = new ExchangeRates();
 
     @GetMapping("/")
-    public String getJson(){
+    public String introduction(){
         String message = "Use \n" +
                 "\t/last10days or " +
                 "\t/rates-by-date/?date={YYYY-MM-DD}" +
